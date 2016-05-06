@@ -9,19 +9,52 @@ output: ioslides_presentation
 
 # Introduction to enaR
 
-## Ecosystem Network Analysis
-
 ## Extant Software
+
+- EwE (Ecosim with Ecopath)
+- ENA.m 
+- WAND 
+- Network 
+- limSolve
+- EcoNet
+
+## enaR: package architecture
+
+- Uses <tt>network</tt> data class
+- Model I/O ("read", "write", "pack", "unpack")
+- Ecosystem network models included
+- Balancing
+- <tt>enaR*</tt> algorithms
+- Orientation functions
+- Background functions
 
 ## Getting Started
 
-## Ecosystem Network Model
+0. Question and Model
+1. Enter model
+2. Check model and assumptions (balance?)
+3. Visualize
+4. Analyze
+5. Visualize with statistics
 
-## Model Construction
+# enaR: Ecosystem Network Models
+
+## Components
+
+- Nodes
+- Storage
+- Flows (connections + weights)
+- Inputs
+- Outputs (export and respiration)
+- Node state (living?)
 
 ## Network Data Class
 
-## Building a Network Object
+- Network attributes
+- Edge attributes
+- Vertex attributes
+
+# enaR: Building a Network Object
 
 ## Generate the flow matrix
 
