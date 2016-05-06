@@ -1,0 +1,150 @@
+---
+title: "ISEM 2016: Ecological Network Analysis"
+author: "M.K. Lau (Harvard Forest, Harvard University)"
+date: Updated "`r format(Sys.time(), '%d %B %Y')`"
+fig_caption: yes
+output: ioslides_presentation
+
+---
+
+# Introduction to enaR
+
+## Ecosystem Network Analysis
+
+## Extant Software
+
+## Getting Started
+
+## Ecosystem Network Model
+
+## Model Construction
+
+## Network Data Class
+
+## Building a Network Object
+
+## Generate the flow matrix
+
+## Name the nodes
+
+## Generate the inputs
+
+## Generate the exports
+
+## "Pack" the model into a network object
+
+## The model network object contents
+
+## Model Library
+## Import the model sets
+## Check the first few model names
+## Isolate a single model
+## Check out the model
+## Network Model Information
+
+## Network Visualization
+## Load data
+## Set the random seed to control plot output
+## Plot network data object (uses plot.network)
+## Set colors to use
+## Extract flow information for later use.
+## Get indices of positive flows
+## Set the random seed to control plot output
+## Scale nodes with storage
+## Add node labels
+## Make rounded nodes
+## Scale arrows to flow magnitude
+## Lastly, remove changes to the plotting parameters
+
+## Data Input: Reading Common Data File Formats
+## WAND
+## Write oyster reef model to a CSV file
+## Read in oyster reef model data from NEA.m formatted CSV file
+## of the information in the "oyster" data object.
+
+## Analyzing Ecosystem Models
+## Balancing for Steady-State
+## Check to see if the model is balanced
+## To BALANCE a model if needed
+## To FORCE BALANCE a model if needed
+
+## Structural Network Analysis
+
+## Flow Analysis
+## Output-oriented direct flow matrix
+## Input-oriented integral flow matrix
+
+## Ascendency
+## Storage Analysis
+## Utility Analysis
+## Environ Analysis
+## Control Analysis
+## Mixed Trophic Impacts
+## Cycle Analysis
+## The individual cycles
+## The disjoint nexuses
+
+## Trophic Aggregations
+## Cycle analysis output for Feeding Cycles
+
+## Other Analyses
+## Examine the structure of ns
+## Set plotting parameters
+## Find centrality order
+## Creating a barplot
+## Adding labels
+
+
+## Output Orientation
+## Check the current orientation
+## enaFlow output in row-column
+## Set the global orientation to school
+## Check that it worked
+## enaFlow output in column-row
+## Check. Outputs should be transposed from each other.
+## Now change back to the default orientation ('rc')
+
+## Multi-Model Analyses (Batch Processing)
+
+## Example Flow Analysis
+
+## Connecting to Other Useful Packages
+## network
+## sna: Social Network Analysis
+## Calculate betweenness centrality
+## Get vertex names
+## Exclude less central node names
+## labels of most central nodes
+## iGraph
+## The adjacency matrix
+## Creating an iGraph graph
+## Betweenness centrality (calculated by iGraph and sna)
+## Shortest path between any two nodes
+## Average path length in the network (graph theory sense)
+## Diameter of the graph
+## Connectivity of the gvertex.connectivity(g)  # connectivity of a graph (group cohesion)
+## Detach igraph package
+
+## EcoNet
+< write.EcoNet.R
+< read.EcoNet.R
+< EcoNetWeb.R
+
+## Bipartite connection
+< as.bipartite.R
+
+## Uncertainty
+< enaUncertainty.R
+
+## enaMTI and enaUtility
+< relationalChange.r
+< signs.r
+
+## new models
+< Chip's
+< Mouquet
+< Chen
+
+
+## Conclusion
+## References

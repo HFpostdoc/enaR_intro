@@ -1,0 +1,59 @@
+### ena_model
+### initial conditions
+FilterFeeders=2000
+Microbiota=2.4121
+Meiofauna=24.121
+DepositFeeders=16.274
+Predators=69.237
+DepositedDetritus=1000
+### inputs
+* -> FilterFeeders c=41.47
+* -> Microbiota c=0
+* -> Meiofauna c=0
+* -> DepositFeeders c=0
+* -> Predators c=0
+* -> DepositedDetritus c=0
+### flows
+FilterFeeders -> FilterFeeders c=0
+FilterFeeders -> Microbiota c=0
+FilterFeeders -> Meiofauna c=0
+FilterFeeders -> DepositFeeders c=0
+FilterFeeders -> Predators c=0.5135
+FilterFeeders -> DepositedDetritus c=15.791
+Microbiota -> FilterFeeders c=0
+Microbiota -> Microbiota c=0
+Microbiota -> Meiofauna c=1.206
+Microbiota -> DepositFeeders c=1.206
+Microbiota -> Predators c=0
+Microbiota -> DepositedDetritus c=0
+Meiofauna -> FilterFeeders c=0
+Meiofauna -> Microbiota c=0
+Meiofauna -> Meiofauna c=0
+Meiofauna -> DepositFeeders c=0.6609
+Meiofauna -> Predators c=0
+Meiofauna -> DepositedDetritus c=4.2403
+DepositFeeders -> FilterFeeders c=0
+DepositFeeders -> Microbiota c=0
+DepositFeeders -> Meiofauna c=0
+DepositFeeders -> DepositFeeders c=0
+DepositFeeders -> Predators c=0.1721
+DepositFeeders -> DepositedDetritus c=1.9076
+Predators -> FilterFeeders c=0
+Predators -> Microbiota c=0
+Predators -> Meiofauna c=0
+Predators -> DepositFeeders c=0
+Predators -> Predators c=0
+Predators -> DepositedDetritus c=0.3262
+DepositedDetritus -> FilterFeeders c=0
+DepositedDetritus -> Microbiota c=8.1721
+DepositedDetritus -> Meiofauna c=7.2745
+DepositedDetritus -> DepositFeeders c=0.6431
+DepositedDetritus -> Predators c=0
+DepositedDetritus -> DepositedDetritus c=0
+### outputs
+FilterFeeders -> * c=25.165
+Microbiota -> * c=5.76
+Meiofauna -> * c=3.5794
+DepositFeeders -> * c=0.4303
+Predators -> * c=0.3594
+DepositedDetritus -> * c=6.1759
