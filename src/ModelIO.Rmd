@@ -1,0 +1,16 @@
+
+# Model Ins and Outs 
+
+## read*
+
+## write*
+
+## pack
+
+## unpack
+
+# other useful functions 
+
+## as.bipartite
+
+## write.EcoNet
