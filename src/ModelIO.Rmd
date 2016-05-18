@@ -2,11 +2,16 @@
 date: Updated "`r format(Sys.time(), '%d %B %Y')`"
 fig_caption: yes
 incremental: true
-output: ioslides_presentation
+output: html_document
 
 ---
 
 # Model Ins and Outs 
+
+The **enaR** package provides multiple functions for reading in models
+from different data formats used by ecosystem network scientists. The
+details and examples of using each of these can be found in the help
+file vignette provided in the package documention. 
 
 ## 
 
@@ -20,8 +25,11 @@ read.csv(file='...')
 
 ## 
 
-pack(flow, input, respiration, export, output, storage, living)
-
+**enaR** also provides to functions for creating a new model in R,
+  which is primarily organizing the different model attributes (flows,
+  input, output, etc.) into a network data object, and for decomposing
+  an model that's in a network format into a list that is more
+  convenient to access. 
 
 ## 
 
@@ -29,17 +37,10 @@ pack(flow, input, respiration, export, output, storage, living)
 
 unpack(x='network object')
 
+## Micro-modeling
 
-## Micro-modeling (Exercise 1)
-
-M = {F, z, e, r, X, Living}
-
-
-## Micro-modeling (Exercise 1)
-
-M = {F, z, e, r, X, Living}
-
-1. Draw a network model as a flow diagram with 3 nodes
+The following is an exercise that should convey the basic parts of
+creating, entering and analyzing a model using **enaR**.
 
 ## Micro-modeling (Exercise 1)
 
@@ -56,7 +57,7 @@ M = {F, z, e, r, X, Living}
 ## Micro-modeling (Solution 1)
 
 ```{r ,results='hide'}
-
+library(enaR)
 F <- c(0,5,0,
        0,0,1,
        0,0,0)
@@ -70,26 +71,4 @@ toy <- pack(F,z,e,r,X,liv)
 enaFlow(toy)
 
 ```
-
-## reading models (Exercise 2)
-
-0. Download Mdloti Estuary model (Scharler 2012)
-1. Read in the Mdloti model (read.enam)
-2. Check if the model is balanced
-3. Get the throughflow values
-4. Make a plot with nodes scaled by throughflow
-
-## reading models (Solution 2)
-
-```{r ,results='hide'}
-
-mdloti <- read.enam('http://people.uncw.edu/borretts/data/MDMAR02.xlsx')
-mdloti
-Tf <- enaFlow(mdloti)$T
-Tf.rel <- Tf/max(Tf)
-plot(mdloti,vertex.cex=Tf.rel,
-     gmode='graph',displaylab=T,arrowhead.cex=0)
-
-```
-
 
